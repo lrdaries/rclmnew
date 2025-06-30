@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Revived Christian Life Ministry</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 pt-20 font-sans">
+
+  <!-- Header -->
+  <header class="bg-gray-800 text-white shadow fixed top-0 left-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
+      <div>
+        <h1 class="text-2xl font-bold">Revived Christian Life Ministry</h1>
+        <p class="text-sm">One Fold, One Shepherd</p>
+      </div>
+      <nav class="mt-4 md:mt-0">
+        <ul class="flex space-x-4 text-sm">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="about.html" class="hover:underline">About</a></li>
+          <li><a href="projects.html" class="hover:underline">Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-4 py-12">
+    <br><h2 class="text-2xl font-bold mb-6">Welcome</h2>
+    <p class="mb-8">
+      Welcome to the official website of Revived Christian Life Ministry! 
+
+We’re so glad you’ve found us!
+
+At Revived Christian Life Ministry, we are a vibrant, Spirit-led community with a passion for God’s presence, His Word, and His people. Whether you’re just beginning your walk with Christ or have been on this journey for years, you are welcome here.
+
+Our mission is to raise a generation of believers who are revived, equipped, and empowered to live purposefully and impact their world for Jesus. Through heartfelt worship, sound teaching, and genuine fellowship, we strive to create an atmosphere where lives are transformed and destinies are fulfilled.
+
+Feel free to explore our website to learn more about our services, ministries, and how you can get involved. We would love to connect with you—and we hope to see you in person soon!
+
+<br>Welcome home to revival. Welcome to Revived Christian Life Ministry.
+    </p>
+
+    <div class="w-full mb-12">
+      <div class="relative">
+        <button id="carousel-prev" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800 bg-opacity-60 text-white rounded-full p-2 hover:bg-opacity-90 focus:outline-none">
+          &#8592;
+        </button>
+        <div id="carousel-track" class="overflow-x-auto scrollbar-hide flex space-x-4 px-10 py-4 transition-all duration-300">
+          <img src="aaron-burden-5c5VcFshOds-unsplash.jpg" alt="Church 1" class="h-48 w-72 object-cover rounded-xl shadow" />
+          <img src="adeyemi-emmanuel-abebayo-MsVfcHU9d_c-unsplash.jpg" alt="Church 2" class="h-48 w-72 object-cover rounded-xl shadow" />
+          <img src="aaron-burden-9npCsdGQ4qU-unsplash.jpg" alt="Church 3" class="h-48 w-72 object-cover rounded-xl shadow" />
+          <img src="adeyemi-emmanuel-abebayo-LYpj7LgLOAo-unsplash.jpg" alt="Church 4" class="h-48 w-72 object-cover rounded-xl shadow" />
+          <img src="priscilla-du-preez-zXsZHJC5qYw-unsplash.jpg" alt="Church 5" class="h-48 w-72 object-cover rounded-xl shadow" />
+          <img src="kelly-sikkema-u8FRCb7FQDI-unsplash.jpg" alt="Church 6" class="h-48 w-72 object-cover rounded-xl shadow" />
+          <img src="aaron-burden-bV_mp5XqWc4-unsplash.jpg" alt="Church 7" class="h-48 w-72 object-cover rounded-xl shadow" />
+          <img src="justin-main-UEesKwR8ccY-unsplash.jpg" alt="Church 8" class="h-48 w-72 object-cover rounded-xl shadow" />
+        </div>
+        <button id="carousel-next" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800 bg-opacity-60 text-white rounded-full p-2 hover:bg-opacity-90 focus:outline-none">
+          &#8594;
+        </button>
+      </div>
+    </div>
+    <script>
+      const track = document.getElementById('carousel-track');
+      const prev = document.getElementById('carousel-prev');
+      const next = document.getElementById('carousel-next');
+      const scrollAmount = 320; // width of image + gap
+
+      prev.onclick = () => {
+        track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      };
+      next.onclick = () => {
+        track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      };
+
+      // Auto-scroll every 7 seconds, restart from beginning if at end
+      function autoScrollCarousel() {
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        if (Math.abs(track.scrollLeft - maxScroll) < 5) {
+          // If at (or near) end, scroll back to start
+          track.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+      }
+      setInterval(autoScrollCarousel, 7000);
+    </script>
+    <style>
+      .scrollbar-hide::-webkit-scrollbar { display: none; }
+      .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+
+   <!-- <div class="grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h3 class="text-xl font-semibold mb-4">This Sunday ...</h3>
+        <img src="keagan-henman-mU85sCiU_08-unsplash.jpg" alt="Church Event" class="rounded-xl shadow mb-4">
+        <p>
+          Join us this Sunday at 10:00 AM for our Prophetic Sunday service. Expect worship, prayer, and a fresh word from God. Everyone is welcome!
+        </p>
+      </div>
+    </div>-->
+  </main>
+
+  <!-- Hero Section -->
+  
+
+<!-- Footer -->
+  <footer class="bg-gray-800 text-gray-200 py-8 mt-10">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h4 class="text-xl font-bold mb-2">About Our Church</h4>
+        <p class="mb-2">Revived Christian Life Ministry is a community of believers...</p>
+        <ul class="text-sm">
+          <li><a href="#" class="hover:underline">Terms of Use</a></li>
+          <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+            <li>
+            <a href="#" id="sitemap-link" class="hover:underline">Sitemap</a>
+            </li>
+            <div id="sitemap-iframe-container" style="display:none; margin-top: 1rem;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.9861548322924!2d7.4301344737710915!3d10.501756264202577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104d35647ff9e373%3A0x8b941a67cc6e762f!2sRevived%20Christians%20Church!5e0!3m2!1sen!2sng!4v1751159295448!5m2!1sen!2sng" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <script>
+            document.getElementById('sitemap-link').addEventListener('click', function(e) {
+              e.preventDefault();
+              var container = document.getElementById('sitemap-iframe-container');
+              container.style.display = container.style.display === 'none' ? 'block' : 'none';
+            });
+            </script>
+          <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.9861548322924!2d7.4301344737710915!3d10.501756264202577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104d35647ff9e373%3A0x8b941a67cc6e762f!2sRevived%20Christians%20Church!5e0!3m2!1sen!2sng!4v1751159295448!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-2">Get in Touch</h4>
+        <ul class="text-sm space-y-2">
+          <li><strong>Phone:</strong> <a href="tel:+2348070597832" class="hover:underline">+2348070597832</a>, <a href="tel:+2347060545684" class="hover:underline">+2347060545684</a></li>
+          <li><strong>Email:</strong> <a href="mailto:revivedministryhq@gmail.com" class="hover:underline">revivedministryhq@gmail.com</a></li>
+          <li><strong>Address:</strong> 1, Church Lane, Abubakar Kigo Extension, Kaduna, Nigeria</li>
+        </ul>
+        <div class="mt-2">
+        <a href="#" class="hover:text-white mr-2">Facebook</a>
+        <a href="#" class="hover:text-white">Youtube</a>
+        <a href="#" class="hover:text-white">Instagram</a>
+      </div>
+      </div>
+    </div>
+    <div class="text-center mt-6 border-t border-gray-700 pt-4">
+      <p class="text-sm">© 2025 Revived Christian Life Ministry. <br>All Rights Reserved.</p>
+      
+    </div>
+  </footer>
+</body>
+  
